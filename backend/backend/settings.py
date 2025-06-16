@@ -165,7 +165,7 @@ if 'PYTHONANYWHERE_DOMAIN' in os.environ:
     
     # Define BACKEND_BASE_URL para producción
     # ¡CAMBIO CRÍTICO! Debe ser la URL del BACKEND en producción, no la del frontend.
-    BACKEND_BASE_URL = 'https://dreamtravel.pythonanywhere.com/' 
+    BACKEND_BASE_URL = f"https://{os.environ.get('PYTHONANYWHERE_DOMAIN', 'tuusuario.pythonanywhere.com')}/"
 
     # CORS Settings (para PRODUCCIÓN en PythonAnywhere)
     CORS_ALLOWED_ORIGINS = [
