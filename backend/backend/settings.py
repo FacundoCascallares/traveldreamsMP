@@ -157,7 +157,7 @@ MERCADOPAGO_PUBLIC_KEY = os.getenv('MERCADOPAGO_PUBLIC_KEY')
 if 'PYTHONANYWHERE_DOMAIN' in os.environ:
     DEBUG = False
     ALLOWED_HOSTS = [
-        'dreamtravelmp.pythonanywhere.com/',
+        'dreamtravelmp.pythonanywhere.com',
         'www.dreamtravelmp.pythonanywhere.com',
         os.environ.get('PYTHONANYWHERE_DOMAIN', ''),
         f"www.{os.environ.get('PYTHONANYWHERE_DOMAIN', '')}"
