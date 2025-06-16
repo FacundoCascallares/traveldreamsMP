@@ -3,6 +3,9 @@ import os
 from decouple import config
 from datetime import timedelta # Importa timedelta para la configuración de JWT
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # Build paths
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -146,8 +149,8 @@ SIMPLE_JWT = {
 
 
 # Credenciales de Mercado Pago
-MERCADOPAGO_ACCESS_TOKEN = os.getenv('MERCADOPAGO_ACCESS_TOKEN', 'APP_USR-6112707204413529-051922-88ebe4c9479cd3495fbb9a6734499bbf-174672931')
-MERCADOPAGO_PUBLIC_KEY = os.getenv('MERCADOPAGO_PUBLIC_KEY', 'APP_USR-14983d03-9340-4815-ac9b-3ade487b5510') 
+MERCADOPAGO_ACCESS_TOKEN = os.getenv('MERCADOPAGO_ACCESS_TOKEN')
+MERCADOPAGO_PUBLIC_KEY = os.getenv('MERCADOPAGO_PUBLIC_KEY')
 
 
 # === CONFIGURACIÓN ESPECÍFICA PARA PRODUCCIÓN (PythonAnywhere) ===
